@@ -4,7 +4,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Establish dependencies
-COPY https://github.com/AugieP57/ci-cd-final-project/blob/main/Dockerfile/requirements.txt .
+COPY ./requirements.txt .
 RUN python -m pip install -U pip wheel && \
     pip install -r requirements.txt
 
