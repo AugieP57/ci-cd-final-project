@@ -3,10 +3,10 @@ name: CI workflow
 on:
   push:
     branches:
-      - 'push on main branch'
+		- 'push on main branch'
   pull_request:
     branches:
-      - 'pull_request on main branch'
+		- 'pull_request on main branch'
 
 jobs:
   build:
@@ -26,5 +26,4 @@ jobs:
           flake8 service --count --max-complexity=10 --max-line-length=127 --statistics
       
       - name: Run unit tests with nose
-        run: | 
-          nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
+        run: | nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
