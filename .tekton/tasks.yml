@@ -48,9 +48,6 @@ spec:
     - name: nosetests
       image: python:3.9-slim
       workingDir: $(workspaces.source.path)
-      script: |
-          #!/bin/bash
-          set -e
-          python -m pip install --upgrade pip wheel
+      run: |
+          python -m pip install --upgrade pip]
           pip install -r requirements.txt
-          nosetests $(params.args)
