@@ -2,7 +2,9 @@ FROM python:3.9-slim
 
 # Establish a working folder
 WORKDIR /app
-    
+ # Establish dependencies
+COPY /workspace/source/requirements.txt .   
+
 # Copy source files last because they change the most
 COPY service ./service
 
