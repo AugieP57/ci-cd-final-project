@@ -3,8 +3,6 @@ FROM python:3.9-slim
 # Establish a working folder
 WORKDIR /app
 
-
-
 # Copy source files last because they change the most
 COPY service ./service
 
